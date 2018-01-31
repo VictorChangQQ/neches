@@ -1,0 +1,499 @@
+login as: schang21
+schang21@neches.cacds.e.uh.edu's password:
+     ??????????????????????????????????????????????????????????????????????
+     ?                        • MobaXterm 10.5 •                          ?
+     ?            (SSH client, X-server and networking tools)             ?
+     ?                                                                    ?
+     ? ? SSH session to schang21@neches.cacds.e.uh.edu                    ?
+     ?   • SSH compression : ?                                            ?
+     ?   • SSH-browser     : ?                                            ?
+     ?   • X11-forwarding  : ?  (remote display is forwarded through SSH) ?
+     ?   • DISPLAY         : ?  (automatically set on remote server)      ?
+     ?                                                                    ?
+     ? ? For more info, ctrl+click on help or visit our website           ?
+     ??????????????????????????????????????????????????????????????????????
+
+
+Use of University of Houston computing and network facilities requires
+prior authorization.  Unauthorized access is prohibited.  Usage may be
+subject to  security testing and monitoring.    Abuse   is  subject to
+criminal   prosecution.   A  complete manual of  security policies and
+procedures is   available at http://www.uh.edu/  in the Administration
+directory.
+
+Creating home directory for schang21.
+--------------------------------------------------------------------
+                           Neches Cluster
+
+  Please do not run your code on the login node. It can cause login,
+  compiling, and other problems.
+
+  This cluster uses SLURM as its job scheduler
+
+  Use   module avail  to list available software
+  Use   module add <name>   to set up environment to use <name>
+  Example   module add lammps
+
+     Documentation: http://www.cacds.uh.edu/opuntia-user-guide
+              Help?? http://support.cacds.uh.edu/
+
+ --------------------------------------------------------------------
+
+/usr/bin/xauth:  file /home/schang21/.Xauthority does not exist
+[schang21@neches ~]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+[schang21@neches ~]$ ls
+[schang21@neches ~]$ cd ..
+[schang21@neches home]$ ls
+abessmer  anajjarb  bvksheer   dparmar   iprotaso  jrodri80  mcebolsu  mtorabbe  pzhang5   svallapu  zli33
+ajacob6   apt       cacdsapps  drathore  jduque    jsrodger  meffiong  nahmadia  sabbasi5  tapena    zsu4
+akhabaz2  aramritk  djoharap   fcantu10  jkim205   jtadolac  mfathi    njkarsky  schang21  xan6      zsun20
+akhabazi  bljones8  dlstolle   honorsit  jlau5     lcostame  mnajaria  nshah7    slstanle  ylin48
+amolavi   bmrahman  dnevans    hpcapps   jpstocks  mamart51  msarrafj  plindner  sseyedjo  yyu20
+[schang21@neches home]$ cd s
+sabbasi5/ schang21/ slstanle/ sseyedjo/ svallapu/
+[schang21@neches home]$ cd schang21/
+[schang21@neches ~]$ ls
+[schang21@neches ~]$ module list
+No modules loaded
+[schang21@neches ~]$ date
+Fri Jan 19 11:23:22 CST 2018
+[schang21@neches ~]$ cal
+    January 2018
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+[schang21@neches ~]$ module --help
+Usage: module [options] sub-command [args ...]
+
+Options:
+  -h -? -H --help                   This help message
+  -s availStyle --style=availStyle  Site controlled avail style: system (default: system)
+  --regression_testing              Lmod regression testing
+  -D                                Program tracing written to stderr
+  --debug=dbglvl                    Program tracing written to stderr
+  --pin_versions=pinVersions        When doing a restore use specified version, do not follow defaults
+  -d --default                      List default modules only when used with avail
+  -q --quiet                        Do not print out warnings
+  --expert                          Expert mode
+  -t --terse                        Write out in machine readable format for commands: list, avail, spider, savelist
+  --initial_load                    loading Lmod for first time in a user shell
+  --latest                          Load latest (ignore default)
+  --ignore_cache                    Treat the cache file(s) as out-of-date
+  --novice                          Turn off expert and quiet flag
+  --raw                             Print modulefile in raw output when used with show
+  -w twidth --width=twidth          Use this as max term width
+  -v --version                      Print version info and quit
+  -r --regexp                       use regular expression match
+  --gitversion                      Dump git version in a machine readable way and quit
+  --dumpversion                     Dump version in a machine readable way and quit
+  --check_syntax --checkSyntax      Checking module command syntax: do not load
+  --config                          Report Lmod Configuration
+  --config_json                     Report Lmod Configuration in json format
+  --mt                              Report Module Table State
+  --timer                           report run times
+  --force                           force removal of a sticky module or save an empty collection
+  --redirect                        Send the output of list, avail, spider to stdout (not stderr)
+  --no_redirect                     Force output of list, avail and spider to stderr
+  --show_hidden                     Avail and spider will report hidden modules
+  --spider_timeout=timeout          a timeout for spider
+  -T --trace
+
+module [options] sub-command [args ...]
+
+Help sub-commands:
+------------------
+  help                              prints this message
+  help                module [...]  print help message from module(s)
+
+Loading/Unloading sub-commands:
+-------------------------------
+  load | add          module [...]  load module(s)
+  try-load | try-add  module [...]  Add module(s), do not complain if not found
+  del | unload        module [...]  Remove module(s), do not complain if not found
+  swap | sw | switch  m1 m2         unload m1 and load m2
+  purge                             unload all modules
+  refresh                           reload aliases from current list of modules.
+  update                            reload all currently loaded modules.
+
+Listing / Searching sub-commands:
+---------------------------------
+  list                              List loaded modules
+  list                s1 s2 ...     List loaded modules that match the pattern
+  avail | av                        List available modules
+  avail | av          string        List available modules that contain "string".
+  spider                            List all possible modules
+  spider              module        List all possible version of that module file
+  spider              string        List all module that contain the "string".
+  spider              name/version  Detailed information about that version of the module.
+  whatis              module        Print whatis information about module
+  keyword | key       string        Search all name and whatis that contain "string".
+
+Searching with Lmod:
+--------------------
+  All searching (spider, list, avail, keyword) support regular expressions:
+
+
+  -r spider           '^p'          Finds all the modules that start with `p' or `P'
+  -r spider           mpi           Finds all modules that have "mpi" in their name.
+  -r spider           'mpi$         Finds all modules that end with "mpi" in their name.
+
+Handling a collection of modules:
+--------------------------------
+  save | s                          Save the current list of modules to a user defined "default" collection.
+  save | s            name          Save the current list of modules to "name" collection.
+  reset                             The same as "restore system"
+  restore | r                       Restore modules from the user's "default" or system default.
+  restore | r         name          Restore modules from "name" collection.
+  restore             system        Restore module state to system defaults.
+  savelist                          List of saved collections.
+  describe | mcc      name          Describe the contents of a module collection.
+  disable             name          Disable a collection.
+
+Deprecated commands:
+--------------------
+  getdefault          [name]        load name collection of modules or user's "default" if no name given.
+                                    ===> Use "restore" instead <====
+  setdefault          [name]        Save current list of modules to name if given, otherwise save as the default list for
+                                    you the user.
+                                    ===> Use "save" instead. <====
+
+Miscellaneous sub-commands:
+---------------------------
+  show                modulefile    show the commands in the module file.
+  use [-a]            path          Prepend or Append path to MODULEPATH.
+  unuse               path          remove path from MODULEPATH.
+  tablelist                         output list of active modules as a lua table.
+
+Important Environment Variables:
+--------------------------------
+  LMOD_COLORIZE                     If defined to be "YES" then Lmod prints properties and warning in color.
+
+    ------------------------------------------------------------------------------------------------------------------------
+
+Lmod Web Sites
+
+  Documentation:    http://lmod.readthedocs.org
+  Github:           https://github.com/TACC/Lmod
+  Sourceforge:      https://lmod.sf.net
+  TACC Homepage:    https://www.tacc.utexas.edu/research-development/tacc-projects/lmod
+
+  To report a bug please read http://lmod.readthedocs.io/en/latest/075_bug_reporting.html
+    ------------------------------------------------------------------------------------------------------------------------
+
+
+
+Modules based on Lua: Version 7.7.1  2017-09-24 02:11 -05:00
+    by Robert McLay mclay@tacc.utexas.edu
+
+[schang21@neches ~]$ module list
+No modules loaded
+[schang21@neches ~]$ module man
+
+Modules based on Lua: Version 7.7.1  2017-09-24 02:11 -05:00
+    by Robert McLay mclay@tacc.utexas.edu
+
+module [options] sub-command [args ...]
+
+Help sub-commands:
+------------------
+  help                              prints this message
+  help                module [...]  print help message from module(s)
+
+Loading/Unloading sub-commands:
+-------------------------------
+  load | add          module [...]  load module(s)
+  try-load | try-add  module [...]  Add module(s), do not complain if not found
+  del | unload        module [...]  Remove module(s), do not complain if not found
+  swap | sw | switch  m1 m2         unload m1 and load m2
+  purge                             unload all modules
+  refresh                           reload aliases from current list of modules.
+  update                            reload all currently loaded modules.
+
+Listing / Searching sub-commands:
+---------------------------------
+  list                              List loaded modules
+  list                s1 s2 ...     List loaded modules that match the pattern
+  avail | av                        List available modules
+  avail | av          string        List available modules that contain "string".
+  spider                            List all possible modules
+  spider              module        List all possible version of that module file
+  spider              string        List all module that contain the "string".
+  spider              name/version  Detailed information about that version of the module.
+  whatis              module        Print whatis information about module
+  keyword | key       string        Search all name and whatis that contain "string".
+
+Searching with Lmod:
+--------------------
+  All searching (spider, list, avail, keyword) support regular expressions:
+
+
+  -r spider           '^p'          Finds all the modules that start with `p' or `P'
+  -r spider           mpi           Finds all modules that have "mpi" in their name.
+  -r spider           'mpi$         Finds all modules that end with "mpi" in their name.
+
+Handling a collection of modules:
+--------------------------------
+  save | s                          Save the current list of modules to a user defined "default" collection.
+  save | s            name          Save the current list of modules to "name" collection.
+  reset                             The same as "restore system"
+  restore | r                       Restore modules from the user's "default" or system default.
+  restore | r         name          Restore modules from "name" collection.
+  restore             system        Restore module state to system defaults.
+  savelist                          List of saved collections.
+  describe | mcc      name          Describe the contents of a module collection.
+  disable             name          Disable a collection.
+
+Deprecated commands:
+--------------------
+  getdefault          [name]        load name collection of modules or user's "default" if no name given.
+                                    ===> Use "restore" instead <====
+  setdefault          [name]        Save current list of modules to name if given, otherwise save as the default list for
+                                    you the user.
+                                    ===> Use "save" instead. <====
+
+Miscellaneous sub-commands:
+---------------------------
+  show                modulefile    show the commands in the module file.
+  use [-a]            path          Prepend or Append path to MODULEPATH.
+  unuse               path          remove path from MODULEPATH.
+  tablelist                         output list of active modules as a lua table.
+
+Important Environment Variables:
+--------------------------------
+  LMOD_COLORIZE                     If defined to be "YES" then Lmod prints properties and warning in color.
+
+    ------------------------------------------------------------------------------------------------------------------------
+
+Lmod Web Sites
+
+  Documentation:    http://lmod.readthedocs.org
+  Github:           https://github.com/TACC/Lmod
+  Sourceforge:      https://lmod.sf.net
+  TACC Homepage:    https://www.tacc.utexas.edu/research-development/tacc-projects/lmod
+
+  To report a bug please read http://lmod.readthedocs.io/en/latest/075_bug_reporting.html
+    ------------------------------------------------------------------------------------------------------------------------
+
+
+[schang21@neches ~]$ module list
+No modules loaded
+[schang21@neches ~]$ modul avail
+-bash: modul: command not found
+[schang21@neches ~]$ module avail
+
+------------------------------------------------- /opt/ohpc/pub/modulefiles --------------------------------------------------
+   cmake/3.9.2    papi/5.5.1
+
+-------------------------------------------------- /share/apps/modulefiles ---------------------------------------------------
+   intel/psxe-2018-64-bit    matlab/r2017b    pgi/17.10
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
+[schang21@neches ~]$ module spider
+
+--------------------------------------------------------------------------------------------------------------------------
+The following is a list of the modules currently available:
+--------------------------------------------------------------------------------------------------------------------------
+  cmake: cmake/3.9.2
+    CMake is an open-source, cross-platform family of tools designed to build, test and package software.
+
+  intel: intel/psxe-2018-64-bit
+
+  matlab: matlab/r2017b
+
+  papi: papi/5.5.1
+    Performance Application Programming Interface
+
+  pgi: pgi/17.10
+
+--------------------------------------------------------------------------------------------------------------------------
+
+To learn more about a package execute:
+
+   $ module spider Foo
+
+where "Foo" is the name of a module.
+
+To find detailed information about a particular package you
+must specify the version if there is more than one version:
+
+   $ module spider Foo/11.1
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+[schang21@neches ~]$ ps -p $$
+  PID TTY          TIME CMD
+ 7157 pts/43   00:00:00 bash
+[schang21@neches ~]$ ls
+[schang21@neches ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .emacs  .mozilla  .ssh  .Xauthority
+[schang21@neches ~]$ pwd
+/home/schang21
+[schang21@neches ~]$ mkdir victortest
+[schang21@neches ~]$ ls
+victortest
+[schang21@neches ~]$ ls -la
+total 24
+drwx------   5 schang21 domain users  177 Jan 19 11:30 .
+drwxr-xr-x. 60 root     root         4096 Jan 19 11:22 ..
+-rw-------   1 schang21 domain users   18 Jan 19 11:21 .bash_logout
+-rw-------   1 schang21 domain users  193 Jan 19 11:21 .bash_profile
+-rw-------   1 schang21 domain users  231 Jan 19 11:21 .bashrc
+-rw-------   1 schang21 domain users  334 Jan 19 11:21 .emacs
+drwx------   4 schang21 domain users   51 Jan 19 11:21 .mozilla
+drwx------   2 schang21 domain users   97 Jan 19 11:21 .ssh
+drwxr-xr-x   2 schang21 domain users    6 Jan 19 11:30 victortest
+-rw-------   1 schang21 domain users   67 Jan 19 11:21 .Xauthority
+[schang21@neches ~]$ cd victortest/
+[schang21@neches victortest]$ ls
+[schang21@neches victortest]$ ls -la
+total 0
+drwxr-xr-x 2 schang21 domain users   6 Jan 19 11:30 .
+drwx------ 5 schang21 domain users 177 Jan 19 11:30 ..
+[schang21@neches victortest]$ cd ..
+[schang21@neches ~]$ ls
+victortest
+[schang21@neches ~]$ cd /home/p
+plindner/ pzhang5/
+[schang21@neches ~]$ cd /home/s
+sabbasi5/ schang21/ slstanle/ sseyedjo/ svallapu/
+[schang21@neches ~]$ cd /home/schang21/victortest/
+[schang21@neches victortest]$ ls
+[schang21@neches victortest]$ cd ..
+[schang21@neches ~]$ mkdir victortest2
+[schang21@neches ~]$ ls
+victortest  victortest2
+[schang21@neches ~]$ cd  victortest
+[schang21@neches victortest]$ cd
+[schang21@neches ~]$ ls
+victortest  victortest2
+[schang21@neches ~]$ man ls
+[schang21@neches ~]$ man mkdir
+[schang21@neches ~]$ !line number
+-bash: !line: event not found
+[schang21@neches ~]$ ls t*
+ls: cannot access t*: No such file or directory
+[schang21@neches ~]$ ls
+victortest  victortest2
+[schang21@neches ~]$ ls *v
+ls: cannot access *v: No such file or directory
+[schang21@neches ~]$ ls v*
+victortest:
+
+victortest2:
+[schang21@neches ~]$ ls
+victortest  victortest2
+[schang21@neches ~]$ cd victortest
+[schang21@neches victortest]$ touch file1
+[schang21@neches victortest]$ touch file2
+[schang21@neches victortest]$ ls -la
+total 0
+drwxr-xr-x 2 schang21 domain users  32 Jan 19 11:42 .
+drwx------ 6 schang21 domain users 200 Jan 19 11:35 ..
+-rw-r--r-- 1 schang21 domain users   0 Jan 19 11:42 file1
+-rw-r--r-- 1 schang21 domain users   0 Jan 19 11:42 file2
+[schang21@neches victortest]$ ls file?
+file1  file2
+[schang21@neches victortest]$ vi man
+[schang21@neches victortest]$ vim
+[schang21@neches victortest]$ ls
+file1  file2
+[schang21@neches victortest]$ vim
+[schang21@neches victortest]$ which vi
+alias vi='vim'
+        /usr/bin/vim
+[schang21@neches victortest]$ ls -larth
+total 0
+-rw-r--r-- 1 schang21 domain users   0 Jan 19 11:42 file1
+-rw-r--r-- 1 schang21 domain users   0 Jan 19 11:42 file2
+drwx------ 6 schang21 domain users 220 Jan 19 11:56 ..
+drwxr-xr-x 2 schang21 domain users  32 Jan 19 11:56 .
+[schang21@neches victortest]$ alias la="ls -larth"
+[schang21@neches victortest]$ la
+total 0
+-rw-r--r-- 1 schang21 domain users   0 Jan 19 11:42 file1
+-rw-r--r-- 1 schang21 domain users   0 Jan 19 11:42 file2
+drwx------ 6 schang21 domain users 220 Jan 19 11:56 ..
+drwxr-xr-x 2 schang21 domain users  32 Jan 19 11:56 .
+[schang21@neches victortest]$ ls
+file1  file2
+[schang21@neches victortest]$ cat file1
+[schang21@neches victortest]$ vi file1
+[schang21@neches victortest]$ cat file1
+sssssss
+ssssss
+sss
+sss:
+[schang21@neches victortest]$ vi file2
+[schang21@neches victortest]$ cat file1 file2
+sssssss
+ssssss
+sss
+sss:
+aaaaa
+aaaa
+aaaa
+aa:
+[schang21@neches victortest]$ cp file1 file3
+[schang21@neches victortest]$ ls
+file1  file2  file3
+[schang21@neches victortest]$ move file3 file4
+-bash: move: command not found
+[schang21@neches victortest]$ mv file3 file4
+[schang21@neches victortest]$ ls
+file1  file2  file4
+[schang21@neches victortest]$ rm file4
+[schang21@neches victortest]$ ls
+file1  file2
+[schang21@neches victortest]$ wc file1
+ 4  4 24 file1
+[schang21@neches victortest]$ vi file1
+[schang21@neches victortest]$ ls
+file1  file2
+[schang21@neches victortest]$ grep s
+
+^C
+[schang21@neches victortest]$ grep s *
+file1:sssssss
+file1:ssssss
+file1:sss
+file1:sss:
+[schang21@neches victortest]$ AGE=45
+[schang21@neches victortest]$ echo $45
+5
+[schang21@neches victortest]$ echo $AGE
+45
+[schang21@neches victortest]$ echo $HOME
+/home/schang21
+[schang21@neches victortest]$ echo $USER
+schang21
+[schang21@neches victortest]$ export DATE=Friday
+[schang21@neches victortest]$ echo "Right now it's $DATE"
+Right now it's Friday
+[schang21@neches victortest]$
+Display all 2037 possibilities? (y or n)
+[schang21@neches victortest]$ export Age=45
+[schang21@neches victortest]$ vi test.bash
+[schang21@neches victortest]$ ls
+file1  file2  test.bash
+[schang21@neches victortest]$ run test.bash
+-bash: run: command not found
+[schang21@neches victortest]$ source test.bash
+45
+[schang21@neches victortest]$ unset Age
+[schang21@neches victortest]$ echo $Age
+
+[schang21@neches victortest]$ source test.bash
+
+[schang21@neches victortest]$  Age=45
+[schang21@neches victortest]$ source test.bash
+45

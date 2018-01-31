@@ -1,0 +1,481 @@
+login as: schang21
+     +--------------------------------------------------------------------+
+     ¦                        • MobaXterm 10.5 •                          ¦
+     ¦            (SSH client, X-server and networking tools)             ¦
+     ¦                                                                    ¦
+     ¦ ? SSH session to schang21@neches.cacds.e.uh.edu                    ¦
+     ¦   • SSH compression : ?                                            ¦
+     ¦   • SSH-browser     : ?                                            ¦
+     ¦   • X11-forwarding  : ?  (remote display is forwarded through SSH) ¦
+     ¦   • DISPLAY         : ?  (automatically set on remote server)      ¦
+     ¦                                                                    ¦
+     ¦ ? For more info, ctrl+click on help or visit our website           ¦
+     +--------------------------------------------------------------------+
+
+
+Use of University of Houston computing and network facilities requires
+prior authorization.  Unauthorized access is prohibited.  Usage may be
+subject to  security testing and monitoring.    Abuse   is  subject to
+criminal   prosecution.   A  complete manual of  security policies and
+procedures is   available at http://www.uh.edu/  in the Administration
+directory.
+
+Last login: Tue Jan 23 15:50:10 2018 from 172.25.74.181
+--------------------------------------------------------------------
+                           Neches Cluster
+
+  Please do not run your code on the login node. It can cause login,
+  compiling, and other problems.
+
+  This cluster uses SLURM as its job scheduler
+
+  Use   module avail  to list available software
+  Use   module add <name>   to set up environment to use <name>
+  Example   module add lammps
+
+     Documentation: http://www.cacds.uh.edu/opuntia-user-guide
+              Help?? http://support.cacds.uh.edu/
+
+ --------------------------------------------------------------------
+
+[schang21@neches ~]$ AA=50
+[schang21@neches ~]$ echo $(AA+1)
+-bash: AA+1: command not found
+
+[schang21@neches ~]$ echo $(AA++)
+-bash: AA++: command not found
+
+[schang21@neches ~]$ echo $((AA++))
+50
+[schang21@neches ~]$ echo $AA
+51
+[schang21@neches ~]$ mkdir Photos
+[schang21@neches ~]$ cd Photos/
+[schang21@neches Photos]$ mkdir {2017..2018}-{01..12}
+[schang21@neches Photos]$ ls
+2017-01  2017-03  2017-05  2017-07  2017-09  2017-11  2018-01  2018-03  2018-05  2
+2017-02  2017-04  2017-06  2017-08  2017-10  2017-12  2018-02  2018-04  2018-06  2
+[schang21@neches Photos]$ ls -l\
+>
+total 0
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-01
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-02
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-03
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-04
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-05
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-06
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-07
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-08
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-09
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-10
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-11
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2017-12
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-01
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-02
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-03
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-04
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-05
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-06
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-07
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-08
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-09
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-10
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-11
+drwxr-xr-x 2 schang21 domain users 6 Jan 24 10:08 2018-12
+[schang21@neches Photos]$ ls -la
+total 8
+drwxr-xr-x 26 schang21 domain users 4096 Jan 24 10:08 .
+drwx------  8 schang21 domain users 4096 Jan 24 10:07 ..
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-01
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-02
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-03
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-04
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-05
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-06
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-07
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-08
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-09
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-10
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-11
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2017-12
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-01
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-02
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-03
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-04
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-05
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-06
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-07
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-08
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-09
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-10
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-11
+drwxr-xr-x  2 schang21 domain users    6 Jan 24 10:08 2018-12
+[schang21@neches Photos]$ cd ..
+[schang21@neches ~]$ ls
+intro2linux  intro2linux.tar.gz  Photos  victortest  victortest2
+[schang21@neches ~]$ wget ftp://ftp.ncbi.nlm.nih.gov/blast/ db/human_genomic.{00..
+--2018-01-24 10:15:10--  ftp://ftp.ncbi.nlm.nih.gov/blast/
+           => ‘.listing’
+Resolving ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)... 130.14.250.7, 2607:f220:4
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.7|:21... conn
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /blast ... done.
+==> PASV ... done.    ==> LIST ... done.
+
+    [ <=>
+
+2018-01-24 10:15:11 (199 KB/s) - ‘.listing’ saved [600]
+
+Removed ‘.listing’.
+Wrote HTML-ized index to ‘index.html’ [1182].
+--2018-01-24 10:15:11--  http://db/human_genomic.00.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.01.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.02.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.03.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.04.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.05.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.06.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.07.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.08.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.09.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.10.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.11.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+--2018-01-24 10:15:11--  http://db/human_genomic.12.tar.gz.md5
+Resolving db (db)... failed: Name or service not known.
+wget: unable to resolve host address ‘db’
+[schang21@neches ~]$ ls
+index.html  intro2linux  intro2linux.tar.gz  Photos  victortest  victortest2
+[schang21@neches ~]$ export DATE=$(date)
+[schang21@neches ~]$ ls
+index.html  intro2linux  intro2linux.tar.gz  Photos  victortest  victortest2
+[schang21@neches ~]$ ls -la
+total 256
+drwx------   8 schang21 domain users   4096 Jan 24 10:15 .
+drwxr-xr-x. 73 root     root           4096 Jan 23 12:27 ..
+-rw-------   1 schang21 domain users   1471 Jan 22 13:40 .bash_history
+-rw-------   1 schang21 domain users     18 Jan 19 11:21 .bash_logout
+-rw-------   1 schang21 domain users    193 Jan 19 11:21 .bash_profile
+-rw-------   1 schang21 domain users    231 Jan 19 11:21 .bashrc
+-rw-------   1 schang21 domain users    334 Jan 19 11:21 .emacs
+-rw-r--r--   1 schang21 domain users   1182 Jan 24 10:15 index.html
+drwxr-xr-x   3 schang21 domain users   4096 Sep  7 15:41 intro2linux
+-rwxr-xr-x   1 schang21 domain users    215 Sep  7 15:41 ._intro2linux
+-rwx------   1 schang21 domain users 208348 Jan 22 10:46 intro2linux.tar.gz
+drwx------   4 schang21 domain users     51 Jan 19 11:21 .mozilla
+drwxr-xr-x  26 schang21 domain users   4096 Jan 24 10:08 Photos
+drwx------   2 schang21 domain users    120 Jan 22 11:03 .ssh
+drwxr-xr-x   2 schang21 domain users     75 Jan 22 10:48 victortest
+drwxr-xr-x   2 schang21 domain users      6 Jan 19 11:35 victortest2
+-rw-------   1 schang21 domain users   2935 Jan 19 12:23 .viminfo
+-rw-------   1 schang21 domain users    268 Jan 24 10:01 .Xauthority
+[schang21@neches ~]$ vi .bash_profile
+[schang21@neches ~]$ export DATE=$(date)
+[schang21@neches ~]$ more date
+date: No such file or directory
+[schang21@neches ~]$ vi date
+[schang21@neches ~]$ more date
+date: No such file or directory
+[schang21@neches ~]$ head date
+head: cannot open ‘date’ for reading: No such file or directory
+[schang21@neches ~]$ more DATE
+DATE: No such file or directory
+[schang21@neches ~]$ cd
+[schang21@neches ~]$ ls
+index.html  intro2linux  intro2linux.tar.gz  Photos  victortest  victortest2
+[schang21@neches ~]$ more DATE
+DATE: No such file or directory
+[schang21@neches ~]$
+
+[schang21@neches ~]$ echo $(( RANDOM%= 7 ))
+4
+[schang21@neches ~]$ echo “one of my lucky number is ” ${POWERBALL[$(( RANDOM%= 7
+“one of my lucky number is ”
+[schang21@neches ~]$ foo=({20..35})
+[schang21@neches ~]$ echo ${foo[2]}
+22
+[schang21@neches ~]$ echo ${foo[@]}
+20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35
+[schang21@neches ~]$ vi script.sh
+[schang21@neches ~]$ vi script.sh
+[schang21@neches ~]$ ls
+index.html   intro2linux.tar.gz  script.sh   victortest2
+intro2linux  Photos              victortest
+[schang21@neches ~]$ chmod u+x script.sh
+[schang21@neches ~]$ ./script.sh
+tar: intro2linux.tgz: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+intro2linux/
+intro2linux/._.DS_Store
+intro2linux/.DS_Store
+intro2linux/._a-z.txt
+intro2linux/a-z.txt
+intro2linux/._data.txt
+intro2linux/data.txt
+intro2linux/._dictionary.txt
+intro2linux/dictionary.txt
+intro2linux/._flow-control-loop1.sh
+intro2linux/flow-control-loop1.sh
+intro2linux/._flow-control-loop2.sh
+intro2linux/flow-control-loop2.sh
+intro2linux/._flow-control-loop3.sh
+intro2linux/flow-control-loop3.sh
+intro2linux/homework/
+intro2linux/homework/._add.c
+intro2linux/homework/add.c
+intro2linux/homework/._input0.old
+intro2linux/homework/input0.old
+intro2linux/homework/._input1.old
+intro2linux/homework/input1.old
+intro2linux/homework/._input10.old
+intro2linux/homework/input10.old
+intro2linux/homework/._input11.old
+intro2linux/homework/input11.old
+intro2linux/homework/._input12.old
+intro2linux/homework/input12.old
+intro2linux/homework/._input13.old
+intro2linux/homework/input13.old
+intro2linux/homework/._input14.old
+intro2linux/homework/input14.old
+intro2linux/homework/._input15.old
+intro2linux/homework/input15.old
+intro2linux/homework/._input16.old
+intro2linux/homework/input16.old
+intro2linux/homework/._input17.old
+intro2linux/homework/input17.old
+intro2linux/homework/._input18.old
+intro2linux/homework/input18.old
+intro2linux/homework/._input19.old
+intro2linux/homework/input19.old
+intro2linux/homework/._input2.old
+intro2linux/homework/input2.old
+intro2linux/homework/._input20.old
+intro2linux/homework/input20.old
+intro2linux/homework/._input21.old
+intro2linux/homework/input21.old
+intro2linux/homework/._input22.old
+intro2linux/homework/input22.old
+intro2linux/homework/._input23.old
+intro2linux/homework/input23.old
+intro2linux/homework/._input24.old
+intro2linux/homework/input24.old
+intro2linux/homework/._input25.old
+intro2linux/homework/input25.old
+intro2linux/homework/._input26.old
+intro2linux/homework/input26.old
+intro2linux/homework/._input27.old
+intro2linux/homework/input27.old
+intro2linux/homework/._input28.old
+intro2linux/homework/input28.old
+intro2linux/homework/._input29.old
+intro2linux/homework/input29.old
+intro2linux/homework/._input3.old
+intro2linux/homework/input3.old
+intro2linux/homework/._input30.old
+intro2linux/homework/input30.old
+intro2linux/homework/._input31.old
+intro2linux/homework/input31.old
+intro2linux/homework/._input32.old
+intro2linux/homework/input32.old
+intro2linux/homework/._input33.old
+intro2linux/homework/input33.old
+intro2linux/homework/._input34.old
+intro2linux/homework/input34.old
+intro2linux/homework/._input35.old
+intro2linux/homework/input35.old
+intro2linux/homework/._input36.old
+intro2linux/homework/input36.old
+intro2linux/homework/._input37.old
+intro2linux/homework/input37.old
+intro2linux/homework/._input38.old
+intro2linux/homework/input38.old
+intro2linux/homework/._input39.old
+intro2linux/homework/input39.old
+intro2linux/homework/._input4.old
+intro2linux/homework/input4.old
+intro2linux/homework/._input40.old
+intro2linux/homework/input40.old
+intro2linux/homework/._input41.old
+intro2linux/homework/input41.old
+intro2linux/homework/._input42.old
+intro2linux/homework/input42.old
+intro2linux/homework/._input43.old
+intro2linux/homework/input43.old
+intro2linux/homework/._input44.old
+intro2linux/homework/input44.old
+intro2linux/homework/._input45.old
+intro2linux/homework/input45.old
+intro2linux/homework/._input46.old
+intro2linux/homework/input46.old
+intro2linux/homework/._input47.old
+intro2linux/homework/input47.old
+intro2linux/homework/._input48.old
+intro2linux/homework/input48.old
+intro2linux/homework/._input49.old
+intro2linux/homework/input49.old
+intro2linux/homework/._input5.old
+intro2linux/homework/input5.old
+intro2linux/homework/._input50.old
+intro2linux/homework/input50.old
+intro2linux/homework/._input6.old
+intro2linux/homework/input6.old
+intro2linux/homework/._input7.old
+intro2linux/homework/input7.old
+intro2linux/homework/._input8.old
+intro2linux/homework/input8.old
+intro2linux/homework/._input9.old
+intro2linux/homework/input9.old
+intro2linux/homework/._numbers
+intro2linux/homework/numbers
+intro2linux/homework/._part1.txt
+intro2linux/homework/part1.txt
+intro2linux/homework/._part2.txt
+intro2linux/homework/part2.txt
+intro2linux/._invoice.txt
+intro2linux/invoice.txt
+intro2linux/._items2searchFor.txt
+intro2linux/items2searchFor.txt
+intro2linux/._l1.txt
+intro2linux/l1.txt
+intro2linux/._l2.txt
+intro2linux/l2.txt
+intro2linux/._lane1.txt
+intro2linux/lane1.txt
+intro2linux/._lane2.txt
+intro2linux/lane2.txt
+intro2linux/._lane3.txt
+intro2linux/lane3.txt
+intro2linux/._lane4.txt
+intro2linux/lane4.txt
+intro2linux/._loop1.bash
+intro2linux/loop1.bash
+intro2linux/._loop1.sh
+intro2linux/loop1.sh
+intro2linux/._loop2.bash
+intro2linux/loop2.bash
+intro2linux/._loop2.sh
+intro2linux/loop2.sh
+intro2linux/._myscript.sh
+intro2linux/myscript.sh
+intro2linux/._sample.sh
+intro2linux/sample.sh
+intro2linux/._serial.txt
+intro2linux/serial.txt
+intro2linux/._z-a.txt
+intro2linux/z-a.txt
+tar: f: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+mv: missing file operand
+Try 'mv --help' for more information.
+./script.sh: line 9: syntax error near unexpected token `newline'
+./script.sh: line 9: `intro2linux newdir ls newdir >'
+[schang21@neches ~]$ ls
+dustbin     intro2linux         Photos     victortest
+index.html  intro2linux.tar.gz  script.sh  victortest2
+[schang21@neches ~]$ cd intro2linux
+[schang21@neches intro2linux]$ ls
+a-z.txt                flow-control-loop3.sh  l2.txt     loop1.bash   sample.sh
+data.txt               homework               lane1.txt  loop1.sh     serial.txt
+dictionary.txt         invoice.txt            lane2.txt  loop2.bash   z-a.txt
+flow-control-loop1.sh  items2searchFor.txt    lane3.txt  loop2.sh
+flow-control-loop2.sh  l1.txt                 lane4.txt  myscript.sh
+[schang21@neches intro2linux]$ cd homework/
+[schang21@neches homework]$ ls
+add.c        input18.old  input27.old  input36.old  input45.old  input8.old
+input0.old   input19.old  input28.old  input37.old  input46.old  input9.old
+input10.old  input1.old   input29.old  input38.old  input47.old  numbers
+input11.old  input20.old  input2.old   input39.old  input48.old  part1.txt
+input12.old  input21.old  input30.old  input3.old   input49.old  part2.txt
+input13.old  input22.old  input31.old  input40.old  input4.old
+input14.old  input23.old  input32.old  input41.old  input50.old
+input15.old  input24.old  input33.old  input42.old  input5.old
+input16.old  input25.old  input34.old  input43.old  input6.old
+input17.old  input26.old  input35.old  input44.old  input7.old
+[schang21@neches homework]$ cd ..
+[schang21@neches intro2linux]$ ls
+a-z.txt                flow-control-loop3.sh  l2.txt     loop1.bash   sample.sh
+data.txt               homework               lane1.txt  loop1.sh     serial.txt
+dictionary.txt         invoice.txt            lane2.txt  loop2.bash   z-a.txt
+flow-control-loop1.sh  items2searchFor.txt    lane3.txt  loop2.sh
+flow-control-loop2.sh  l1.txt                 lane4.txt  myscript.sh
+[schang21@neches intro2linux]$ vi loop1.sh
+[schang21@neches intro2linux]$ ./loop1.sh
+-bash: ./loop1.sh: Permission denied
+[schang21@neches intro2linux]$ chmod u+x loop1.sh
+[schang21@neches intro2linux]$ ./loop1.sh
+This is iteration 1 and the time is 11:11:58
+This is iteration 2 and the time is 11:11:59
+This is iteration 3 and the time is 11:12:00
+This is iteration 4 and the time is 11:12:01
+This is iteration 5 and the time is 11:12:02
+This is iteration 6 and the time is 11:12:03
+This is iteration 7 and the time is 11:12:04
+This is iteration 8 and the time is 11:12:05
+This is iteration 9 and the time is 11:12:06
+This is iteration 10 and the time is 11:12:07
+[schang21@neches intro2linux]$ ./loop2.sh
+-bash: ./loop2.sh: Permission denied
+[schang21@neches intro2linux]$ chmod u+x loop2.sh
+[schang21@neches intro2linux]$ ./loop2.sh
+This is iteration 1 and the time is 11:13:20
+This is iteration 2 and the time is 11:13:21
+This is iteration 3 and the time is 11:13:22
+This is iteration 4 and the time is 11:13:23
+This is iteration 5 and the time is 11:13:24
+This is iteration 6 and the time is 11:13:25
+This is iteration 7 and the time is 11:13:26
+This is iteration 8 and the time is 11:13:27
+This is iteration 9 and the time is 11:13:28
+This is iteration 10 and the time is 11:13:29
+[schang21@neches intro2linux]$ vi loop2.sh
+[schang21@neches intro2linux]$ ./loop2.sh
+This is iteration 1 and the time is 11:14:37
+This is iteration 2 and the time is 11:14:38
+This is iteration 3 and the time is 11:14:39
+This is iteration 4 and the time is 11:14:40
+This is iteration 5 and the time is 11:14:41
+This is iteration 6 and the time is 11:14:42
+This is iteration 7 and the time is 11:14:43
+This is iteration 8 and the time is 11:14:44
+This is iteration 9 and the time is 11:14:45
+This is iteration 10 and the time is 11:14:46
+[schang21@neches intro2linux]$ ls
+a-z.txt                flow-control-loop3.sh  l2.txt     loop1.bash   sample.sh
+data.txt               homework               lane1.txt  loop1.sh     serial.txt
+dictionary.txt         invoice.txt            lane2.txt  loop2.bash   z-a.txt
+flow-control-loop1.sh  items2searchFor.txt    lane3.txt  loop2.sh
+flow-control-loop2.sh  l1.txt                 lane4.txt  myscript.sh
+[schang21@neches intro2linux]$ vi flow-control-loop1.sh
+[schang21@neches intro2linux]$ chmod u+x flow-control-loop1.sh
+[schang21@neches intro2linux]$ ./flow-control-loop1.sh
+This is iteration 1 and the time is 11:18:57
+This is iteration 2 and the time is 11:18:57
+This is iteration 3 and the time is 11:18:57
+This is iteration 4 and the time is 11:18:57
+[schang21@neches intro2linux]$ vi flow-control-loop2.sh
+[schang21@neches intro2linux]$ vi flow-control-loop3.sh
+[schang21@neches intro2linux]$
